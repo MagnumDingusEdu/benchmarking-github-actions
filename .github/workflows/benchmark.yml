@@ -24,15 +24,18 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Downloading Geekbench 5
-      run: wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
+      run: |
+        wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
 
     - name: Extracting the package
       run: |
         tar xvf Geekbench-5.1.0-Linux.tar.gz
-        cd Geekbench-5.1.0-Linux/
-        chmod +x geekbench5
+
 
     - name: Run the benchmark
-      run: ./geekbench5
+      run: |
+        cd Geekbench-5.1.0-Linux/
+        chmod +x geekbench5        
+        ./geekbench5
         
 
