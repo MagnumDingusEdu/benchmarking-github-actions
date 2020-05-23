@@ -37,11 +37,4 @@ jobs:
         cd Geekbench-5.1.0-Linux/
         chmod +x geekbench5        
         ./geekbench5
-        
 
-    - name: Find and Replace
-      uses: jacobtomlinson/gha-find-replace@master
-      with:
-        find: "^MULTI.*BLUE"
-        replace: "MULTI%20CORE-6969-BLUE?travis"
-        include: "README.md"
