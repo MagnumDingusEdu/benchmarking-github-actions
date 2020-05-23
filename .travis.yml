@@ -1,0 +1,8 @@
+dist: bionic
+before_script: 
+ - wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
+ - tar xvf Geekbench-5.1.0-Linux.tar.gz
+ - chmod +x Geekbench-5.1.0-Linux.tar.gz/geekbench5
+
+script: 
+ - ./Geekbench-5.1.0-Linux.tar.gz/geekbench5
